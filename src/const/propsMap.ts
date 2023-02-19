@@ -51,9 +51,63 @@ const fontFamilyOptions = fontFamilyArr.map((font) => {
  * 文本 a-input a-textarea
  * 数字 a-slider a-input-number
  * 几个文本之一 a-dropdown a-
- *
+ *paddingLeft: string;
+  paddingRight: string;
+  paddingTop: string;
+  paddingBottom: string;
+
+    left: string;
+  top: string;
  */
 export const mapPropsToFrom: PropsToForms = {
+  width:{
+    text: "宽",
+    component: "a-input-number",
+    initalTransform: (v: string) => parseInt(v),
+    updateTransform: (v: string) => v + "px",
+  },
+  height:{
+    text: "高",
+    component: "a-input-number",
+    initalTransform: (v: string) => parseInt(v),
+    updateTransform: (v: string) => v + "px",
+  },
+  paddingLeft:{
+    text: "左内边距",
+    component: "a-input-number",
+    initalTransform: (v: string) => parseInt(v),
+    updateTransform: (v: string) => v + "px",
+  },
+  paddingRight:{
+    text: "右内边距",
+    component: "a-input-number",
+    initalTransform: (v: string) => parseInt(v),
+    updateTransform: (v: string) => v + "px",
+  },
+  paddingTop:{
+    text: "上内边距",
+    component: "a-input-number",
+    initalTransform: (v: string) => parseInt(v),
+    updateTransform: (v: string) => v + "px",
+  },
+  paddingBottom:{
+    text: "下内边距",
+    component: "a-input-number",
+    initalTransform: (v: string) => parseInt(v),
+    updateTransform: (v: string) => v + "px",
+  },
+  left:{
+    text: "左",
+    component: "a-input-number",
+    initalTransform: (v: string) => parseInt(v),
+    updateTransform: (v: string) => v + "px",
+  },
+  top:{
+    text: "顶",
+    component: "a-input-number",
+    initalTransform: (v: string) => parseInt(v),
+    updateTransform: (v: string) => v + "px",
+  },
   text: {
     text: "文本",
     component: "a-textarea",
@@ -104,5 +158,17 @@ export const mapPropsToFrom: PropsToForms = {
     subComponent: "a-select-option",
     text: "字体",
     options: fontFamilyOptions,
+  },
+  opacity: {
+    text: "透明度",
+    component: "a-slider",
+    extraProps: {
+      min: 0,
+      max: 100,
+      step: 1,
+      reverse: true,
+    },
+    initalTransform: (v: string) => parseFloat(v) * 100,
+    updateTransform: (v: number) => (v / 100).toString(),
   },
 };

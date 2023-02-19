@@ -4,16 +4,22 @@ export const defaultTextTemplates = [
     fontSize: "30px",
     fontWeight: "bold",
     tag: "h2",
+    width: "100px",
+    height: "50px",
   },
   {
     text: "正文内容",
     tag: "p",
+    width: "100px",
+    height: "50px",
   },
   {
     text: "链接内容",
     color: "#1890ff",
     textDecoration: "underline",
     tag: "p",
+    width: "100px",
+    height: "50px",
   },
   {
     text: "按钮内容",
@@ -28,7 +34,8 @@ export const defaultTextTemplates = [
     paddingRight: "10px",
     paddingTop: "5px",
     paddingBottom: "5px",
-    width: "100px",
     textAlign: "center",
+    width: "100px",
+    height: "50px",
   },
 ];

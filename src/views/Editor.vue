@@ -14,7 +14,7 @@
               @onItemClick="addItem"
             />
           </a-col>
-          <a-col :span="8">
+          <a-col :span="8" :style="{ position: 'relative' }">
             画布区域
             <!-- <div
               v-for="component in components"
@@ -33,6 +33,13 @@
               :id="component.id"
               @setActive="setActive(component.id)"
               :active="component.id === (currentElement && currentElement.id)"
+              :style="{
+                position: 'absolute',
+                left: component.props.left,
+                top: component.props.top,
+                width: component.props.width,
+                height: component.props.height,
+              }"
             >
               <component :is="component.name" v-bind="component.props" />
             </edit-wrapper>

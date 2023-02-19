@@ -1,8 +1,6 @@
 import _ from "lodash-es";
 
 export interface CommonComponentProps {
-  actionType: string;
-  url: string;
   height: string;
   width: string;
   paddingLeft: string;
@@ -19,6 +17,8 @@ export interface CommonComponentProps {
   left: string;
   top: string;
   right: string;
+  actionType: string;
+  url: string;
 }
 
 export interface TextComponentProps extends CommonComponentProps {

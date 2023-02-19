@@ -37,7 +37,7 @@ interface FromProps {
   subComponent?: string;
   value: string;
   extraProps?: { [key: string]: any };
-  text?: string;
+  text: string;
   options?: { text: string | VNode; value: any }[];
   valueProp: string;
   eventName: string;
@@ -71,8 +71,10 @@ export default defineComponent({
               options,
               eventName = "change",
               extraProps,
+              text = "",
             } = item;
             const newItem: FromProps = {
+              text,
               component,
               subComponent,
               options,
