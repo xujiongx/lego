@@ -2,6 +2,7 @@
   <div class="content-container">
     <template-list :list="testData"></template-list>
     <a-button type="primary" @click="handleClick">跳转</a-button>
+    <hello-world></hello-world>
   </div>
 </template>
 
@@ -11,11 +12,13 @@ import { useRouter } from "vue-router";
 import { useStore } from "vuex";
 import { computed } from "@vue/runtime-core";
 import { GlobalDataProps } from '@/store';
+import HelloWorld from '@/components/HelloWorld.vue';
 
 export default {
   name: "Homne",
   components: {
     TemplateList,
+    HelloWorld,
   },
   setup() {
     const store = useStore<GlobalDataProps>();
